@@ -1,0 +1,15 @@
+__pycache__/
+downloads/
+*.pyc
+*.pyo
+*.pyd
+netease_cookie.txt
+qq_cookie.txt
+youtube_cookies.txt
+.venv/
+venv/
+env/
+dist/
+build/
+music.ico
+cover.svg
