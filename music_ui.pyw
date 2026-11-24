@@ -205,6 +205,12 @@ def ffmpeg_path() -> str | None:
     for candidate in FFMPEG_CANDIDATES:
         if candidate and Path(candidate).exists():
             return str(candidate)
+    local_app_data = os.environ.get("LOCALAPPDATA")
+    if local_app_data:
+        winget_packages = Path(local_app_data) / "Microsoft" / "WinGet" / "Packages"
+        for candidate in winget_packages.glob("Gyan.FFmpeg_*/ffmpeg-*/bin/ffmpeg.exe"):
+            if candidate.is_file():
+                return str(candidate)
     return None
 
 
