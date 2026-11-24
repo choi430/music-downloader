@@ -45,7 +45,6 @@ CHUNK_SIZE = 64 * 1024
 FFMPEG_CANDIDATES = [
     os.environ.get("FFMPEG"),
     shutil.which("ffmpeg"),
-    r"C:\Users\choi4\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-8.1.1-full_build\bin\ffmpeg.exe",
 ]
 
 NE_HEADERS = {
